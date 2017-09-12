@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Owen Barton
-  description: Role to deploy an EC2 instance from an initial AMI and prepare for partitioning. Used in coordination for other roles (see https://github.com/CivicActions/ansible-ec2-800-53-partition) to create baseline system compliance with NIST 800-53 controls and NIST STIGs.
+  description: Role to deploy an EC2 instance from an initial AMI and prepare for partitioning. Used in coordination for other roles (to partition, deploy and harden and create baseline system compliance with NIST 800-53 controls and NIST STIGs.
   company: CivicActions
   license: BSD
   min_ansible_version: 2.2
@@ -14,7 +14,7 @@ galaxy_info:
     - system
 
 dependencies:
-  - role: ansible-ec2-800-53-deploy
+  - role: CivicActions.ec2-800-53-deploy
     when: ansible_mounts is not defined or ansible_mounts|length == 1
-  - role: ansible-ec2-800-53-partition
+  - role: CivicActions.ec2-800-53-partition
     when: ansible_mounts|length == 1
