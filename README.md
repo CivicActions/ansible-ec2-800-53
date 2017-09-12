@@ -1,2 +1,2 @@
-# ansible-ec2-stig-partition-deploy
-Role to deploy an EC2 AMI with partitions compliant with the NIST Security Technical Implementation Guide (STIG) 
+# ansible-ec2-800-53
+Role to deploy an EC2 instance from an initial AMI and prepare for partitioning. Used in coordination for other roles (to [partition](https://github.com/CivicActions/ansible-ec2-800-53-partition), [deploy](https://github.com/CivicActions/ansible-ec2-800-53-deploy) and [harden](https://github.com/rhtps/ansible-role-800-53)) and create baseline system compliance with NIST 800-53 controls and NIST STIGs.
